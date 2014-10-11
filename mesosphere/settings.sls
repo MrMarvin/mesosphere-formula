@@ -14,7 +14,7 @@
 {%- set work_dir          = gc.get('work_dir', pc.get('work_dir', '/tmp/mesos')) %}
 {%- set port              = gc.get('port', pc.get('port', '5050')) %}
 
-{%- set isolation_type    = gc.get('isolation_type', pc.get('isolation_type', 'process')) %}
+{%- set isolation_type    = gc.get('isolation_type', pc.get('isolation_type', 'posix/cpu,posix/mem')) %}
 
 {%- set zookeeper_server_list = gc.get('zookeeper_server_list', pc.get('zookeeper_server_list', [])) %}
 {%- set zookeeper_port        = gc.get('zookeeper_port', pc.get('zookeeper_port', 2181)) %}
