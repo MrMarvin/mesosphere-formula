@@ -1,0 +1,11 @@
+{% set mesosphere_map = salt['grains.filter_by']({
+    'Ubunut': {
+      'repository_name': "deb http://repos.mesosphere.io/{{ grains['osfullname'].lower() }} {{ grains['oscodename'] }} main",
+      },
+    'Debian': {
+      'repository_name': '',
+    },
+    'RedHat': {
+      'repository_name': '',
+    },
+}, merge=salt['pillar.get']('mesosphere:lookup')) %}
