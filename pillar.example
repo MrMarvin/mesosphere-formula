@@ -5,9 +5,9 @@ mesosphere:
   config:
     cluser_name: 'MyMesosCluster'
     zookeeper_server_list:
-      - 'zk-01.acme.com'
-      - 'zk-02.acme.com'
-      - 'zk-03.acme.com'
+      - 'zk-01.acme.com:2181'
+      - 'zk-02.acme.com:2181'
+      - 'zk-03.acme.com:2181'
     port: 5050
 
 mine_functions:
