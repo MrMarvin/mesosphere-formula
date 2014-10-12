@@ -17,12 +17,12 @@ mesos:
 
 mesos-zk-file:
   file.managed:
-  - name: {{ mesos.config_dir }}/zk
-  - source: salt://mesosphere/conf/zk
-  - user: root
-  - group: root
-  - mode: 644
-  - template: jinja
-  - context:
-    zookeeper_server_list: {{ mesos.zookeeper_server_list }}
-    zookeeper_path: {{ mesos.zookeeper_path }}
+    - name: {{ mesos.config_dir }}/zk
+    - source: salt://mesosphere/conf/zk
+    - user: root
+    - group: root
+    - mode: 644
+    - template: jinja
+    - context:
+      zookeeper_server_list: {{ mesos.zookeeper_server_list }}
+      zookeeper_path: {{ mesos.zookeeper_path }}
