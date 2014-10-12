@@ -12,7 +12,8 @@ base:
       - pkg: mesos
 
 mesos:
-  pkg.installed
+  pkg.installed:
+    - version: {{ mesos.version }}
 
 mesos-zk-file:
   file.managed:
