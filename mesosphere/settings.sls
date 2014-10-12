@@ -9,7 +9,7 @@
   'cluster_name' : pc.get('cluster_name', 'MyMesosCluster'),
 
   'ip'          : gc.get('ip', None),
-  'hotname'     : gc.get('hostname', None),
+  'hostname'    : gc.get('hostname', None),
   'logs_dir'    : gc.get('logs_dir', pc.get('logs_dir', '/var/log/mesos')),
   'work_dir'    : gc.get('work_dir', pc.get('work_dir', '/tmp/mesos')),
   'config_dir'  : gc.get('config_dir', pc.get('config_dir', '/etc/mesos')),
