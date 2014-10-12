@@ -1,14 +1,14 @@
 # these are the supported pillars with their defaults
 
 mesosphere:
-    version: '0.20.0'
-    config:
-      cluser_name: 'MyMesosCluster'
-      zookeeper_server_list:
-        - 'zk-01.acme.com'
-        - 'zk-02.acme.com'
-        - 'zk-03.acme.com'
-      port: 5050
+  version: '0.20.0'
+  config:
+    cluser_name: 'MyMesosCluster'
+    zookeeper_server_list:
+      - 'zk-01.acme.com'
+      - 'zk-02.acme.com'
+      - 'zk-03.acme.com'
+    port: 5050
 
 mine_functions:
   network.interfaces: []
