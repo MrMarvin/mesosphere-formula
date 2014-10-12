@@ -1,3 +1,5 @@
+{%- from 'mesosphere/settings.sls' import mesos with context %}
+
 include:
   - mesosphere
 

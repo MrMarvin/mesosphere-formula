@@ -1,3 +1,5 @@
+{%- from 'mesosphere/settings.sls' import mesos with context %}
+
 base:
   pkgrepo.managed:
     - humanname: Mesosphere Repo
@@ -11,3 +13,15 @@ base:
 
 mesos:
   pkg.installed
+
+mesos-zk-file:
+  file.managed:
+  - name: {{ mesos.config_dir }}/zk
+  - source: salt://mesosphere/conf/zk
+  - user: root
+  - group: root
+  - mode: 644
+  - template: jinja
+  - context:
+    zookeeper_server_list: {{ mesos.zookeeper_server_list }}
+    zookeeper_path: {{ mesos.zookeeper_path }}

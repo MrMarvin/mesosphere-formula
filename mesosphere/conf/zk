@@ -1,0 +1,1 @@
+zk://{{ ','.join(zookeeper_server_list) }}/{{ zookeeper_path }}
