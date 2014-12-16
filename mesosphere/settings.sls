@@ -17,5 +17,5 @@
 
   'isolation_type'        : gc.get('isolation_type', pc.get('isolation_type', 'posix/cpu,posix/mem')),
   'zookeeper_server_list' : gc.get('zookeeper_server_list', pc.get('zookeeper_server_list', ['localhost:2181'])),
-  'zookeeper_path'        : gc.get('zookeeper_path', pc.get('zookeeper_path', 'MyMesosCluster'))
+  'zookeeper_path'        : gc.get('zookeeper_path', pc.get('cluser_name', 'MyMesosCluster'))
   }) %}
